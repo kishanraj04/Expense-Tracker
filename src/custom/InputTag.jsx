@@ -1,18 +1,15 @@
-import React, { useState } from 'react'
-import { use } from 'react'
+import React from 'react'
 
-function InputTag({name,value,setValue}) {
-
-  
+function InputTag({ name, reference }) {
   return (
-    <>
-      <input type="text" name={name} className='border-[2px] bg-transparent font-serif text-xl' required value={value} onChange={(e)=>
-        {
-          setValue(e.target.value)
-        }
-      }/>
-    </>
+    <input
+      ref={reference}
+      type="text"
+      name={name}
+      className="border-[2px] bg-transparent font-serif text-xl"
+      required
+    />
   )
 }
 
-export default InputTag
+export default InputTag;

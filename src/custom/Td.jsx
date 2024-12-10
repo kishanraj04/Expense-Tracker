@@ -4,7 +4,7 @@ function Td({value}) {
   return (
     <>
     {
-        value.map((value)=> <td  className="border-[2px]">{value}</td>)
+        value.map((value)=> <td  className="border-[2px]  text-center">{value}</td>)
     }</>
   )
 }
