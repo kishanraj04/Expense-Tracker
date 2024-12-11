@@ -28,7 +28,7 @@ function Menu({value,reference,flag,setExpense}) {
 
   return (
     <>
-      <select name="" id="" className='w-full bg-transparent text-white border-[2px]' ref={reference} onChange={handleMenu}>
+      <select name="" id="" className='w-[100%] bg-transparent text-black border-[2px]' ref={reference} onChange={handleMenu}>
       {
         value.map((item,idx)=> <option value={item} key={idx} className='text-center border-[1px] text-black font-bold'>{item}</option>)
       }
