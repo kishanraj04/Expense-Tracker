@@ -29,12 +29,12 @@ function Expenses() {
     handleFormSubmit(title, category, price, expense, setExpense);
   };
 
-  console.log("exp ", expense);
+ 
   return (
     <div className="flex gap-5 w-[80%] justify-evenly items-center">
       <form
         action=""
-        className="w-[40%] h-[15rem] flex justify-center items-center bg-[url('https://png.pngtree.com/thumb_back/fh260/background/20210929/pngtree-glassmorphism-wave-effect-abstract-background-image_908575.png')] bg-cover bg-center bg-opacity-20 rounded-md bg-clip-padding backdrop-blur-lg bg-white/30 border-[2px] border-gray-200 shadow-lg"
+        className="w-[40%] h-[15rem] flex justify-center items-center bg-cover bg-center bg-opacity-20 rounded-md bg-clip-padding backdrop-blur-sm bg-white/30 border-[2px] border-gray-200 shadow-lg"
         onSubmit={handle}
       >
         <div>
@@ -54,7 +54,8 @@ function Expenses() {
                   <LableTag value={"Category"} />
                 </td>
                 <td>
-                  <InputTag reference={categoryRef} />
+                  
+                  <Menu value={["Grocery","Electric Bille","Food","Education","Cloths"]} reference={categoryRef} />
                 </td>
               </tr>
 
@@ -83,7 +84,7 @@ function Expenses() {
         <table className="w-[100%] h-[10rem] bg-white/30 backdrop-blur-xl rounded-md border-[2px] border-gray-200 shadow-lg">
           <thead>
             <tr className="border-[2px]">
-              <Th value={["Title",<Menu value={["Grocery","Electric Bille","Food","Education","Cloths"]}/>, "Price", "delete"]} />
+              <Th value={["Title",<Menu value={["All","Grocery","Electric Bille","Food","Education","Cloths"]} flag={true} expense={expense} setExpense={setExpense}/>, "Price", "delete"]} />
             </tr>
           </thead>
           <tbody>
@@ -92,17 +93,17 @@ function Expenses() {
             ) : (
               expense.map((exp, index) => (
                 <tr key={index} className="border-[2px]">
-                  <td className="border-[2px] text-center font-serif">
+                  <td className="border-[2px] text-center text-white font-serif">
                     {exp.Title}
                   </td>
-                  <td className="border-[2px] text-center font-serif">
+                  <td className="border-[2px] text-center text-white font-serif">
                     {exp.Category}
                   </td>
-                  <td className="border-[2px] text-center font-serif">
+                  <td className="border-[2px] text-center text-white font-serif">
                     {exp.Price}
                   </td>
                   <td
-                    className="flex justify-center items-center font-serif h-full w-full"
+                    className="flex justify-center text-white items-center font-serif h-full w-full"
                     id={exp.id}
                     onClick={(e)=> deleteRow(e,setExpense)}
                   >

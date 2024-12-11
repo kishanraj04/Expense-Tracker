@@ -4,7 +4,7 @@ function Th({value}) {
   return (
     <>
     {
-        value.map((value)=> <th  className="border-[2px] text-center">{value}</th>)
+        value.map((value,idx)=> <th  key={idx} className="border-[2px] text-center">{value}</th>)
     }
     </>
   )

@@ -4,10 +4,10 @@ import React from 'react'
 function Header() {
   return (
   
-      <div className='h-[5rem] w-[100%] flex justify-center items-center'>
-      <h1 className='text-3xl font-serif bg-black text-white w-full h-[5rem] text-center'>Expense Tracker</h1>
-
-      </div>
+    <h1 className="text-3xl font-serif bg-[url('https://www.shutterstock.com/image-vector/modern-abstraction-glassmorphism-trend-design-260nw-2261914119.jpg')] bg-cover bg-center bg-opacity-20 text-white w-full h-[5rem] text-center rounded-md bg-clip-padding backdrop-blur-sm bg-white/30 border border-gray-200 shadow-lg">
+    Expense Tracker
+  </h1>
+  
    
   )
 }
